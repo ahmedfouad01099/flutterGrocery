@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttergrocery/pages/detailsscreen.dart';
 import 'package:fluttergrocery/pages/home.dart';
 import 'package:fluttergrocery/pages/landing.dart';
 
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Home(),
+      home: Landing(),
     );
   }
 }

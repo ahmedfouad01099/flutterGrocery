@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttergrocery/pages/Detailsscreen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -109,84 +110,94 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-              
+
                     SizedBox(height: 30),
-              
+
                     Container(
                       height: 237,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                          Container(
-                            width: 190, // Add a fixed width for the card
-                            margin: EdgeInsets.only(
-                              right: 15,
-                            ), // Add some spacing between cards
-                            padding: EdgeInsets.only(
-                              top: 15,
-                              left: 20,
-                            ), // Add padding inside the card
-                            decoration: BoxDecoration(
-                              color: Color(0xffffe08e),
-                              borderRadius: BorderRadius.circular(
-                                30,
-                              ), // Optional: rounded corners
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Orange",
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DetailsScreen(),
                                 ),
-                                Text(
-                                  "\$2.99 each",
-                                  style: TextStyle(
-                                    color: Colors.black45,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Center(
-                                  // Center the image
-                                  child: Image.asset(
-                                    'images/orange.png',
-                                    height: 100,
-                                  ),
-                                ),
-                                SizedBox(height: 10),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment
-                                          .end, // This will now work properly
-                                  children: [
-                                    Container(
-                                      padding: EdgeInsets.all(10),
-                                      decoration: BoxDecoration(
-                                        color: Color(0xFFFFEAB5),
-                                        borderRadius: BorderRadius.only(
-                                          bottomRight: Radius.circular(30),
-                                          topLeft: Radius.circular(20),
-                                        ), // Optional: rounded corners
-                                      ),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: Colors.orange,
-                                      ),
+                              );
+                            },
+                            child: Container(
+                              width: 190, // Add a fixed width for the card
+                              margin: EdgeInsets.only(
+                                right: 15,
+                              ), // Add some spacing between cards
+                              padding: EdgeInsets.only(
+                                top: 15,
+                                left: 20,
+                              ), // Add padding inside the card
+                              decoration: BoxDecoration(
+                                color: Color(0xffffe08e),
+                                borderRadius: BorderRadius.circular(
+                                  30,
+                                ), // Optional: rounded corners
+                              ),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Orange",
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                  ],
-                                ),
-                              ],
+                                  ),
+                                  Text(
+                                    "\$2.99 each",
+                                    style: TextStyle(
+                                      color: Colors.black45,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Center(
+                                    // Center the image
+                                    child: Image.asset(
+                                      'images/orange.png',
+                                      height: 100,
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment
+                                            .end, // This will now work properly
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.all(10),
+                                        decoration: BoxDecoration(
+                                          color: Color(0xFFFFEAB5),
+                                          borderRadius: BorderRadius.only(
+                                            bottomRight: Radius.circular(30),
+                                            topLeft: Radius.circular(20),
+                                          ), // Optional: rounded corners
+                                        ),
+                                        child: Icon(
+                                          Icons.add,
+                                          color: Colors.orange,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-              
+
                           SizedBox(width: 20),
-              
+
                           Container(
                             width: 190, // Add a fixed width for the card
                             margin: EdgeInsets.only(
@@ -244,7 +255,10 @@ class _HomeState extends State<Home> {
                                           topLeft: Radius.circular(20),
                                         ), // Optional: rounded corners
                                       ),
-                                      child: Icon(Icons.add, color: Colors.pink),
+                                      child: Icon(
+                                        Icons.add,
+                                        color: Colors.pink,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -254,9 +268,9 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-              
+
                     SizedBox(height: 20),
-              
+
                     Text(
                       "Near You",
                       style: TextStyle(
@@ -273,9 +287,9 @@ class _HomeState extends State<Home> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-              
+
                     SizedBox(height: 10),
-              
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -288,9 +302,9 @@ class _HomeState extends State<Home> {
                             fit: BoxFit.cover,
                           ),
                         ),
-              
+
                         SizedBox(width: 20),
-              
+
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -302,9 +316,9 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-              
+
                             SizedBox(height: 5),
-              
+
                             Text(
                               "09:00AM - 10:00PM",
                               style: TextStyle(
@@ -313,9 +327,9 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-              
+
                             SizedBox(height: 5),
-              
+
                             Row(
                               children: [
                                 Icon(Icons.star, color: Colors.black),
@@ -342,9 +356,9 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-              
+
                     SizedBox(height: 10),
-              
+
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -357,9 +371,9 @@ class _HomeState extends State<Home> {
                             fit: BoxFit.cover,
                           ),
                         ),
-              
+
                         SizedBox(width: 20),
-              
+
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -371,9 +385,9 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-              
+
                             SizedBox(height: 5),
-              
+
                             Text(
                               "08:00AM - 08:00PM",
                               style: TextStyle(
@@ -382,9 +396,9 @@ class _HomeState extends State<Home> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-              
+
                             SizedBox(height: 5),
-              
+
                             Row(
                               children: [
                                 Icon(Icons.star, color: Colors.black),
